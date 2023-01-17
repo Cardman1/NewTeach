@@ -1,0 +1,34 @@
+﻿<Window x:Class="TeachBook.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TeachBook"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition>
+                
+            </ColumnDefinition>
+            <ColumnDefinition>
+                
+            </ColumnDefinition>
+            <ColumnDefinition>
+                
+            </ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100">
+
+            </RowDefinition>
+            <RowDefinition>
+
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <Image Source="C:\Users\311-16(student)\source\repos\TeachBook\TeachBook\Assets\Image\wsr-300.png" Grid.Column="0"></Image>
+        <Label Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="MainText">X</Label>
+        <Button Width="110" Grid.Column="2" x:Name="BackButton" Click="BackClick">Назад</Button>
+        <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" x:Name="MainFrame" Navigated="MainFrame_Navigated"></Frame>
+    </Grid>
+</Window>

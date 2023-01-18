@@ -24,11 +24,10 @@ namespace TeachBook
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new View.Pages.Registration());
+            MainFrame.Navigate(new View.Pages.AuntificationPage());
         }
         private void MainFrame_Navigated(object sender, NavigationEventArgs e)
         {
-            
         }
         private void BackClick(object sender, RoutedEventArgs e)
         {

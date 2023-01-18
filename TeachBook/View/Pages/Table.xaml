@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:TeachBook.View.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Registration">
+      Title="Таблица">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -19,14 +19,15 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Label Grid.Column="0">Выбеите групу:</Label>
-        <ComboBox Grid.Column="1"></ComboBox>
-        <Button Grid.Column="2" Click="ExcelEnter"></Button>
-        <DataGrid x:Name="DataStudent" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
+        <ComboBox Grid.Column="1" x:Name="ComboGroup" SelectionChanged="ComboChange">
+        </ComboBox>
+        <Button Grid.Column="2" Click="ExcelEnter">Вывод в excel</Button>
+        <DataGrid x:Name="DataStudent" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" AutoGenerateColumns="False" ColumnWidth="*">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding FiestName}"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding LastName}"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding PatronomicName}"></DataGridTextColumn>
-                <DataGridTextColumn Binding="{Binding Groups}"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Groups.NameGroup}"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding YearAdd.Year}"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding FormTime.Name}"></DataGridTextColumn>
             </DataGrid.Columns>

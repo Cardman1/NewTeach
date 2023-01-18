@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using TeachBook.Model;
 
 namespace TeachBook
 {
@@ -13,5 +14,6 @@ namespace TeachBook
     /// </summary>
     public partial class App : Application
     {
+        public static Users CurrentUser = null;
     }
 }

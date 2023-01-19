@@ -33,7 +33,6 @@ namespace TeachBook.View.Pages
             try
             {
                 Users loginArray = bc.contex.Users.Where(x => x.Login == LoginText.Text && x.Password == Password.Text).FirstOrDefault();
-                App.CurrentUser = loginArray;
                 if (loginArray == null)
                 {
                     MessageBox.Show("Такой пользователь отсутствует!",
@@ -43,6 +42,7 @@ namespace TeachBook.View.Pages
                 }
                 else
                 {
+                    App.CurrentUser = loginArray;
                     switch (loginArray.IdRole)
                     {
                         case 1:
@@ -51,10 +51,12 @@ namespace TeachBook.View.Pages
                             MessageBoxButton.OK);
                             break;
                         case 2:
-                            this.NavigationService.Navigate(new Registration());
+                            this.NavigationService.Navigate(new MenuPage());
+                            App.inter = 1;
                             break;
                         case 3:
-                            this.NavigationService.Navigate(new Registration());
+                            this.NavigationService.Navigate(new MenuPage());
+                            App.inter = 1;
                             break;
 
                     }
@@ -68,12 +70,12 @@ namespace TeachBook.View.Pages
 
         private void SavePassword(object sender, RoutedEventArgs e)
         {
-            var password = Convert.ToBase64String(new SHA256CryptoServiceProvider().ComputeHash(Encoding.ASCII.GetBytes(Password.Text)));
+            
         }
 
         private void RegPassword(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show($"{App.CurrentUser}");
+
         }
     }
 }

@@ -15,5 +15,6 @@ namespace TeachBook
     public partial class App : Application
     {
         public static Users CurrentUser = null;
+        public static int inter = 0;
     }
 }

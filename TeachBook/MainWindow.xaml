@@ -31,5 +31,9 @@
                Content="{Binding ElementName=MainFrame, Path =Content.Title}"></Label>
         <Button Width="110" Grid.Column="2" x:Name="BackButton" Click="BackClick" Height="50">Выход</Button>
         <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" x:Name="MainFrame" Navigated="MainFrame_Navigated"></Frame>
+        <WrapPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top">
+            <Label x:Name="UsersLabel"></Label>
+            <Label x:Name="PasswordLabel"></Label>
+        </WrapPanel>
     </Grid>
 </Window>

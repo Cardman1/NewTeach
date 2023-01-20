@@ -1,0 +1,34 @@
+﻿<Page x:Class="TeachBook.View.Pages.RegistrationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TeachBook.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="RegistrationPage">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="200"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <Label>Логин:</Label>
+            <Label>Пароль:</Label>
+            <Label>Повторный пароль:</Label>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="2">
+            <TextBox Margin="5" x:Name="LoginTB"></TextBox>
+            <TextBox Margin="5" x:Name="PasswordTB"></TextBox>
+            <TextBox Margin="5" x:Name="APasswordTB"></TextBox>
+            <CheckBox x:Name="CheckAdmin">Акаунт админ?</CheckBox>
+        </StackPanel>
+        <Button Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" Margin="50" Click="CreatUsersCliact">Создать</Button>
+    </Grid>
+</Page>

@@ -75,7 +75,7 @@ namespace TeachBook.View.Pages
 
         private void RegPassword(object sender, RoutedEventArgs e)
         {
-
+            this.NavigationService.Navigate(new RegistrationPage());
         }
     }
 }

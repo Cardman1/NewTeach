@@ -64,11 +64,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModel\UsersViewModel.cs" />
     <Compile Include="View\Pages\AuntificationPage.xaml.cs">
       <DependentUpon>AuntificationPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Pages\MenuPage.xaml.cs">
       <DependentUpon>MenuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\RegistrationPage.xaml.cs">
+      <DependentUpon>RegistrationPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Pages\Table.xaml.cs">
       <DependentUpon>Table.xaml</DependentUpon>
@@ -90,6 +94,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Pages\MenuPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\RegistrationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -65,8 +65,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ViewModel\UsersViewModel.cs" />
+    <Compile Include="View\Pages\AddStudentPage.xaml.cs">
+      <DependentUpon>AddStudentPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Pages\AuntificationPage.xaml.cs">
       <DependentUpon>AuntificationPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\DeletePage.xaml.cs">
+      <DependentUpon>DeletePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\Pages\MenuPage.xaml.cs">
       <DependentUpon>MenuPage.xaml</DependentUpon>
@@ -89,7 +95,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="View\Pages\AddStudentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Pages\AuntificationPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Pages\DeletePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

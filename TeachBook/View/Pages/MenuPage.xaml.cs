@@ -29,7 +29,7 @@ namespace TeachBook.View.Pages
 
         private void AddStydent(object sender, RoutedEventArgs e)
         {
-
+            this.NavigationService.Navigate(new AddStudentPage());
         }
 
         private void AllStudent(object sender, RoutedEventArgs e)
@@ -49,7 +49,7 @@ namespace TeachBook.View.Pages
 
         private void Delete(object sender, RoutedEventArgs e)
         {
-
+            this.NavigationService.Navigate(new DeletePage());
         }
     }
 }

@@ -39,13 +39,9 @@ namespace TeachBook.View.Pages
 
         private void AddOtchenku(object sender, RoutedEventArgs e)
         {
-
+            this.NavigationService.Navigate(new AddOtchenkPage());
         }
 
-        private void Redact(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void Delete(object sender, RoutedEventArgs e)
         {

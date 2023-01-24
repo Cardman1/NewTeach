@@ -16,5 +16,6 @@ namespace TeachBook
     {
         public static Users CurrentUser = null;
         public static int inter = 0;
+        public static Students students = null;
     }
 }

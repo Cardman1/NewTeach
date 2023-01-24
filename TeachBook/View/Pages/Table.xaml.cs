@@ -173,5 +173,13 @@ namespace TeachBook.View.Pages
             wordDock.SaveAs2($"{Directory.GetCurrentDirectory()}\\docs\\Test.docx");
             wordDock.SaveAs2($"{Directory.GetCurrentDirectory()}\\docs\\Test.pdf",Word.WdExportFormat.wdExportFormatPDF);
         }
+
+        private void ProfileClick(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            Students item = button.DataContext as Students;
+            App.students = item;
+            this.NavigationService.Navigate(new ProfilePage());
+        }
     }
 }

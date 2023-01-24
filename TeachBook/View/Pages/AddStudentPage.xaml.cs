@@ -49,7 +49,7 @@ namespace TeachBook.View.Pages
                 new Professions
                 {
                     IdProfession = 0,
-                    NameProfession = "Выбрать группу"
+                    NameProfession = "Выбрать специальность"
                 }
             };
             professionMass.AddRange(bc.contex.Professions.ToList());
@@ -62,7 +62,7 @@ namespace TeachBook.View.Pages
                 new FormTime
                 {
                     Id = 0,
-                    Name = "Выбрать группу"
+                    Name = "Выбрать форму обучения"
                 }
             };
             formTimeMass.AddRange(bc.contex.FormTime.ToList());

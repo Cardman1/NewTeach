@@ -31,6 +31,13 @@
                 <DataGridTextColumn Binding="{Binding Groups.NameGroup}"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding YearAdd.Year}"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding FormTime.Name}"></DataGridTextColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button x:Name="Profile" Click="ProfileClick">Профиль</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

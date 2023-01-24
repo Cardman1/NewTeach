@@ -29,8 +29,9 @@
         <Image Source="C:\Users\311-16(student)\source\repos\TeachBook\TeachBook\Assets\Image\wsr-300.png" Grid.Column="0"></Image>
         <Label Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" x:Name="MainText"
                Content="{Binding ElementName=MainFrame, Path =Content.Title}"></Label>
-        <Button Width="110" Grid.Column="2" x:Name="BackButton" Click="BackClick" Height="50">Выход</Button>
-        <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" x:Name="MainFrame" Navigated="MainFrame_Navigated"></Frame>
+        <Button Width="110" Grid.Column="2" x:Name="ExitButton" Click="ExitClick" Height="50">Выход</Button>
+        <Button Width="110" Grid.Column="2" x:Name="BackButton" Click="BackClick" Height="50">Назад</Button>
+        <Frame Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" x:Name="MainFrame" Navigated="MainFrame_Navigated" ContentRendered="MainFrame_ContentRendered" NavigationUIVisibility="Hidden"></Frame>
         <WrapPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Label x:Name="UsersLabel"></Label>
             <Label x:Name="PasswordLabel"></Label>

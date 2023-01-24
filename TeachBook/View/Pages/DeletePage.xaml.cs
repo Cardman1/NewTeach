@@ -25,20 +25,25 @@ namespace TeachBook.View.Pages
         public DeletePage()
         {
             InitializeComponent();
+            GridDelete.ItemsSource = bc.contex.Students.ToList();
         }
 
-        private void DeleteStudent(object sender, RoutedEventArgs e)
+        private void DeleteButtonClick(object sender, RoutedEventArgs e)
         {
-            Students delStudents = bc.contex.Students.Where(x => x.FiestName == FirstNameTB.Text && x.LastName == LastNameTB.Text && x.PatronomicName == PatronomicTB.Text).FirstOrDefault();
-            bc.contex.Students.Remove(delStudents);
+            Button selectedButton = (Button)sender;
+            Students item = selectedButton.DataContext as Students;
+            bc.contex.Students.Remove(item);
             if (bc.contex.SaveChanges() > 0)
             {
-                MessageBox.Show("Студент удален", "удаление из базу данных", MessageBoxButton.OK, MessageBoxImage.Question);
+                MessageBox.Show("Студент удалён","Уведомление",MessageBoxButton.OK);
+                GridDelete.ItemsSource = null;
+                GridDelete.ItemsSource = bc.contex.Students.ToList();
             }
             else
             {
-                MessageBox.Show("Студент не удален", "удаление из базу данных", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Студент не удалён", "Уведомление", MessageBoxButton.OK);
             }
+
         }
     }
 }

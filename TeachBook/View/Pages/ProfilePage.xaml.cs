@@ -22,6 +22,7 @@ namespace TeachBook.View.Pages
     public partial class ProfilePage : Page
     {
         Core bc = new Core();
+        int indeficate = 0;
         public ProfilePage()
         {
             InitializeComponent();
@@ -33,11 +34,20 @@ namespace TeachBook.View.Pages
         private void RedactButton_Click(object sender, RoutedEventArgs e)
         {
             Button selectedButton = (Button)sender;
-            if (ReadOtchenka.Text != null)
+            GridReadOt.Visibility = Visibility.Visible;
+            if (ReadOtchenka.Text != "" && indeficate == 1)
             {
                 if(Convert.ToInt32(ReadOtchenka.Text)<=5 && Convert.ToInt32(ReadOtchenka.Text) >= 2)
                 {
                     Journals item = selectedButton.DataContext as Journals;
+                    History historyAdd = new History()
+                    {
+                        IdStatus = 2,
+                        IdStudent = App.students.IdStudent,
+                        IdTeacher = Convert.ToInt32(App.CurrentUser.Login),
+                        DateEvent = DateTime.Now
+                    };
+                    bc.contex.History.Add(historyAdd);
                     item.Evaluation = Convert.ToInt32(ReadOtchenka.Text);
                     if (bc.contex.SaveChanges()>0) 
                     {
@@ -57,6 +67,11 @@ namespace TeachBook.View.Pages
                 }
                 
             }
+        }
+
+        private void LostFocusText(object sender, RoutedEventArgs e)
+        {
+            indeficate = 1;
         }
     }
 }

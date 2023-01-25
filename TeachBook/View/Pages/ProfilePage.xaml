@@ -19,10 +19,12 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Label x:Name="FIO"></Label>
-        <StackPanel Grid.Row="1" Grid.Column="2">
-            <Label Margin="10">Введите оценку</Label>
-            <TextBox Margin="10" x:Name="ReadOtchenka"></TextBox>
-        </StackPanel>
+        <Grid Grid.Row="1" Grid.Column="2" x:Name="GridReadOt" Visibility="Collapsed" VerticalAlignment="Center" HorizontalAlignment="Center" Background="WhiteSmoke">
+            <StackPanel>
+                <Label Margin="10" Foreground="Black">Введите оценку</Label>
+                <TextBox Margin="10" x:Name="ReadOtchenka" LostFocus="LostFocusText" TextAlignment="Center"></TextBox>
+            </StackPanel>
+        </Grid>
         
         <DataGrid x:Name="ProfileGrid" Grid.Row="1" Grid.ColumnSpan="2" AutoGenerateColumns="False" ColumnWidth="*">
             <DataGrid.Columns>

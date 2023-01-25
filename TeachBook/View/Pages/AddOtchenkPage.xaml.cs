@@ -66,7 +66,7 @@ namespace TeachBook.View.Pages
             {
                 IdSubject = s
             };
-            if (o <= 5 && o >= 2 )
+            if (o <= 5 && o >= 2)
             {
                 hasSubjects = bc.contex.TeacherHasSubjects.Where(x => x.IdTeacher == idTeach && x.IdSubject == s).ToList();
                 if (hasSubjects.Count()>0)

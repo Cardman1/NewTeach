@@ -1,24 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using TeachBook.Model;
-using Excel = Microsoft.Office.Interop.Excel;
-using Word = Microsoft.Office.Interop.Word;
-
-namespace TeachBook.View.Pages
-{
     /// <summary>
     /// Логика взаимодействия для Registration.xaml
     /// </summary>
@@ -180,25 +159,6 @@ namespace TeachBook.View.Pages
             Students item = button.DataContext as Students;
             App.students = item;
             this.NavigationService.Navigate(new ProfilePage());
-        }
-
-        private void DiplonClick(object sender, RoutedEventArgs e)
-        {
-            Button button = (Button)sender;
-            Students item = button.DataContext as Students;
-            App.students = item;
-                Word.Application application = new Word.Application();
-                string file = $"{Directory.GetCurrentDirectory()}\\Docs\\Диплом.doc";
-                if (File.Exists(file))
-                {
-                    Word.Document doc = application.Documents.Open(file);
-                    doc.Activate();
-                    doc.Bookmarks["FIO"].Range.Text = item.FiestName + " " + item.LastName + " " + item.PatronomicName;
-                    doc.Bookmarks["Proffesion"].Range.Text = item.Professions.NameProfession;
-                    application.Visible = true;
-                    doc.SaveAs2($"{Directory.GetCurrentDirectory()}\\docs\\Диплом_1.doc");
-                    
-                }
         }
     }
 }

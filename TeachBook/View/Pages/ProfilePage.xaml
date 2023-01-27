@@ -33,11 +33,12 @@
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button x:Name="RedactButton" Click="RedactButton_Click">Редактировать</Button>
+                            <Button x:Name="RedactButton" Click="RedactButton_Click" Content="Редактировать"></Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
+        <Button Grid.Column="2" x:Name="Diplom" Click="DiplomClick"> Диплом</Button>
     </Grid>
 </Page>

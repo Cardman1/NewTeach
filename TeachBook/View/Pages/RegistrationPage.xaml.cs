@@ -30,7 +30,7 @@ namespace TeachBook.View.Pages
         private void CreatUsersCliact(object sender, RoutedEventArgs e)
         {
             int i = 2;
-            if(PasswordTB != null && LoginTB != null && APasswordTB.Text != null)
+            if(PasswordTB.Text != "" && LoginTB.Text != "" && APasswordTB.Text != "")
             {
                 if (APasswordTB.Text == PasswordTB.Text)
                 {

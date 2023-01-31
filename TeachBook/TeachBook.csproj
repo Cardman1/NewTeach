@@ -64,6 +64,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ViewModel\AddOtchenkClass.cs" />
+    <Compile Include="ViewModel\AddStudentClass.cs" />
+    <Compile Include="ViewModel\DeleteClass.cs" />
+    <Compile Include="ViewModel\GroupClass.cs" />
+    <Compile Include="ViewModel\LoginClass.cs" />
+    <Compile Include="ViewModel\RedactClass.cs" />
+    <Compile Include="ViewModel\RegistrationClass.cs" />
     <Compile Include="ViewModel\UsersViewModel.cs" />
     <Compile Include="View\Pages\AddOtchenkPage.xaml.cs">
       <DependentUpon>AddOtchenkPage.xaml</DependentUpon>
@@ -211,6 +218,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>TeachBase.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="Assets\Цщкв\Документ Microsoft Word.docx" />
     <None Include="Model\TeachBase.edmx.diagram">
       <DependentUpon>TeachBase.edmx</DependentUpon>
     </None>

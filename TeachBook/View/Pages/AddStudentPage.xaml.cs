@@ -87,7 +87,7 @@ namespace TeachBook.View.Pages
 
         private void AddStudent(object sender, RoutedEventArgs e)
         {
-            int i = Convert.ToInt32(ProfessionCB.SelectedValue);
+            int i = Convert.ToInt32(GroupCB.SelectedValue);
             if (i == 0) MessageBox.Show("Выберите группу", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error); else
             {
                 int y = Convert.ToInt32(ProfessionCB.SelectedValue);
